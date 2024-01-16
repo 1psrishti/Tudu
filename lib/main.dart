@@ -7,7 +7,7 @@ import 'package:tudu/widgets/todo_tile.dart';
 
 void main() async {
   await Hive.initFlutter();
-  var box = await Hive.openBox('box');
+  await Hive.openBox('box');
   runApp(const MyApp());
 }
 
@@ -42,7 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
     db.updateDataBase();
   }
 
-  //TODO: toast - cannot be empty
   void createNewTask() {
     showDialog(
         context: context,
